@@ -1,0 +1,121 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Calculadora SUMA</h1>
+
+<label> Valor 1</label>
+<br />
+<input type="number" id="valor1" @bind="valor1" />
+<br />
+
+<label> Valor 2</label>
+<br />
+<input type="number" id="valor2" @bind="valor2" />
+<br />
+
+<button @onclick="Sumar"> Sumar</button>
+<br />
+<strong> Resultado: </strong> @resultado
+
+@code {
+    private int valor1;
+    private int valor2;
+    private int resultado;
+
+    private void Sumar()
+    {
+        resultado = valor1 + valor2;
+    }
+}
+
+<br />
+
+<h1>Calculadora Resta</h1>
+
+<label> Valor 1</label>
+<br />
+<input type="number" id="valor01" @bind="valor01" />
+<br />
+
+<label> Valor 2</label>
+<br />
+<input type="number" id="valor02" @bind="valor02" />
+<br />
+
+<button @onclick="Restar"> Restar</button>
+<br />
+<strong> Resultado: </strong> @resultadores
+<br />
+
+@code {
+    private int valor01;
+    private int valor02;
+    private int resultadores;
+
+    private void Restar()
+    {
+        resultadores = valor01 - valor02;
+    }
+}
+
+<br />
+
+<h1>Calculadora Multiplicacion</h1>
+
+<label> Valor 1</label>
+<br />
+<input type="number" id="valor0001" @bind="valor0001" />
+<br />
+
+<label> Valor 2</label>
+<br />
+<input type="number" id="valor0002" @bind="valor0002" />
+<br />
+
+<button @onclick="Multiplicar"> Multiplicar</button>
+<br />
+<strong> Resultado: </strong> @resultadoMUL
+<br />
+
+@code {
+    private int valor0001;
+    private int valor0002;
+    private int resultadoMUL;
+
+    private void Multiplicar()
+    {
+        resultadoMUL = valor0001 * valor0002;
+    }
+}
+
+<br />
+<h1>Calculadora DIVISION</h1>
+
+<label> Valor 1</label>
+<br />
+<input type="number" id="valor001" @bind="valor001" />
+<br />
+
+<label> Valor 2</label>
+<br />
+<input type="number" id="valor002" @bind="valor002" />
+<br />
+
+<button @onclick="Dividir"> Dividir</button>
+<br />
+<strong> Resultado: </strong> @resultadoDiv
+<br />
+
+@code {
+    private int valor001;
+    private int valor002;
+    private int resultadoDiv;
+
+    private void Dividir()
+    {
+        resultadoDiv = valor001 / valor002;
+    }
+}
+
+<br />
